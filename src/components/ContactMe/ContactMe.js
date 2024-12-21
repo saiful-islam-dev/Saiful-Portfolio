@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaEnvelope, FaPhoneAlt, FaLinkedin, FaGithub } from 'react-icons/fa';
 import {
     ContactSection,
     Title,
@@ -11,6 +10,7 @@ import {
     TextArea,
     SubmitButton,
 } from './ContactMeStyles';
+import { FaEnvelope, FaPhoneAlt, FaLinkedin } from 'react-icons/fa';
 
 const ContactMe = () => {
     return (
@@ -32,19 +32,11 @@ const ContactMe = () => {
                         LinkedIn
                     </a>
                 </ContactItem>
-                <ContactItem>
-                    <FaGithub />
-                    <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer">
-                        GitHub
-                    </a>
-                </ContactItem>
             </ContactList>
-
-            {/* Contact Form */}
             <ContactForm>
-                <InputField type="text" placeholder="Your Name" required />
-                <InputField type="email" placeholder="Your Email" required />
-                <TextArea placeholder="Your Message" rows="5" required />
+                <InputField type="text" placeholder="Your Name" />
+                <InputField type="email" placeholder="Your Email" />
+                <TextArea placeholder="Your Message" />
                 <SubmitButton type="submit">Send Message</SubmitButton>
             </ContactForm>
         </ContactSection>
