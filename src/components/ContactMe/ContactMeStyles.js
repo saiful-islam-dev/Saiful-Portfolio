@@ -77,9 +77,9 @@ export const ContactItem = styled.div`
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 1rem;
+  font-size: 2rem;
   background: #2a2a3d;
-  padding: 0.5rem 1rem;
+  padding: 1rem 2rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 100%;
@@ -108,13 +108,15 @@ export const ContactForm = styled.form`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
 `;
 
 export const InputField = styled.input`
-  padding: 0.75rem;
-  font-size: 1rem;
+   width: 100%;
+  max-width: 600px;
+  padding: 1.5rem;
+  font-size: 2rem;
   border: 1px solid #444;
   border-radius: 4px;
   background-color: #2a2a3d;
@@ -141,8 +143,8 @@ export const TextArea = styled.textarea`
 `;
 
 export const SubmitButton = styled.button`
-  padding: 0.75rem;
-  font-size: 1rem;
+  padding: 2rem;
+  font-size: 2rem;
   color: #ffffff;
   background-color: #00d8ff;
   border: none;

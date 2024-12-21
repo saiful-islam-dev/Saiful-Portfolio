@@ -21,10 +21,10 @@ const ContactMe = () => {
             </Description>
             <ContactList>
                 <ContactItem>
-                    <FaEnvelope /> <span>youremail@example.com</span>
+                    <FaEnvelope /> <span>saifulislamx264@gmail.com</span>
                 </ContactItem>
                 <ContactItem>
-                    <FaPhoneAlt /> <span>+880-123-456-789</span>
+                    <FaPhoneAlt /> <span>+880-1902486366</span>
                 </ContactItem>
                 <ContactItem>
                     <FaLinkedin />
