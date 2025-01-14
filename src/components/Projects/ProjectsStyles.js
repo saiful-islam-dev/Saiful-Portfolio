@@ -62,9 +62,9 @@ export const Hr = styled.hr`
 
 export const CardInfo = styled.p`
   width: 100%;
-  padding: 0 50px;
+  padding: 0 20px;
   color: #e4e6e7;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   line-height: 24px;
   text-align: justify;
   margin-top: 2rem;
@@ -96,7 +96,8 @@ export const ExternalLinks = styled.a`
 export const TagList = styled.ul`
   display: flex;
   justify-content: space-around;
-  padding: 1rem 0;
+  flex-wrap: wrap;
+  margin: 1rem;
 `;
 
 export const Tag = styled.li`
