@@ -1,10 +1,22 @@
 import styled from 'styled-components';
 
+export const ImgContainer = styled.div`
+  width: 100%;
+  height: 200px; /* Set a fixed height for the image container */
+  overflow: hidden; /* Hide the overflow to keep the image within bounds */
+  position: relative;
+`;
+
 export const Img = styled.img`
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
-  overflow: hidden;
+  position: relative;
+  transition: transform 3s ease-in-out;
+
+  &:hover {
+    transform: translateY(-50%); /* Adjust the percentage as needed */
+  }
 `;
 
 export const GridContainer = styled.section`
@@ -104,3 +116,4 @@ export const Tag = styled.li`
   color: #d8bfbf;
   font-size: 1.5rem;
 `;
+

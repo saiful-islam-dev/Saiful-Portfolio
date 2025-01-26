@@ -11,6 +11,7 @@ import {
   TagList,
   TitleContent,
   UtilityList,
+  ImgContainer,
   Img
 } from './ProjectsStyles';
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
@@ -22,7 +23,9 @@ const Projects = () => (
     <GridContainer>
       {projects.map((p, i) => (
         <BlogCard key={i}>
-          <Img src={p.image} />
+          <ImgContainer>
+            <Img src={p.image} />
+          </ImgContainer>
           <HeaderThree title={p.title}>{p.title}</HeaderThree>
           <Hr />
           <CardInfo className="card-info">{p.description}</CardInfo>
