@@ -23,9 +23,9 @@ const Hero = (props) => (
             />
           </div>
         </SectionTitle>
-        
+
         <SectionText>
-          I'm a passionate and dedicated web developer from Bangladesh. With expertise in frontend and full-stack development, I enjoy building dynamic and responsive web applications. My skill set includes HTML, CSS, JavaScript, React, Node.js, and more. I am committed to continuous learning and staying updated with the latest industry trends.
+          Driven by passion and dedication, I am a web developer from Bangladesh with a strong focus on front-end and full-stack development. With experience in technologies like HTML, CSS, JavaScript, React, and Node.js, I build responsive and impactful applications. Constantly learning and evolving, I aim to deliver solutions that meet modern industry standards.
         </SectionText>
         <Button onClick={(e) => {
           e.preventDefault();
