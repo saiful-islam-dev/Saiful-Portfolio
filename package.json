@@ -8,7 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "emailjs-com": "^3.2.0",
+    "@emailjs/browser": "^4.4.1",
     "next": "13.2.4",
     "ngrok": "^4.3.3",
     "react": "18.2.0",

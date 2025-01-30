@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
+
 import {
     ContactSection,
     Title,
@@ -33,14 +34,14 @@ const ContactMe = () => {
 
         emailjs
             .send(
-                'your_service_id', // Replace with your EmailJS Service ID
-                'your_template_id', // Replace with your EmailJS Template ID
+                'service_cb0wokl', // Replace with your EmailJS Service ID
+                'template_roxevsh', // Replace with your EmailJS Template ID
                 {
                     from_name: formData.name,
                     from_email: formData.email,
                     message: formData.message,
                 },
-                'your_public_key' // Replace with your EmailJS Public Key
+                'ZkdrdYDHyRCF1ml6E' // Replace with your EmailJS Public Key
             )
             .then(
                 () => {
