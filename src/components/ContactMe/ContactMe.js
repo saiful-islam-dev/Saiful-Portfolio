@@ -20,7 +20,9 @@ const ContactMe = () => {
         email: '',
         message: '',
     });
-    console.log(formData);
+
+
+
     const [successMessage, setSuccessMessage] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
 
@@ -32,28 +34,24 @@ const ContactMe = () => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs
-            .send(
-                'service_cb0wokl', // Replace with your EmailJS Service ID
-                'template_roxevsh', // Replace with your EmailJS Template ID
-                {
-                    from_name: formData.name,
-                    from_email: formData.email,
-                    message: formData.message,
-                },
-                'ZkdrdYDHyRCF1ml6E' // Replace with your EmailJS Public Key
-            )
-            .then(
-                () => {
-                    setSuccessMessage('Message sent successfully!');
-                    setErrorMessage('');
-                    setFormData({ name: '', email: '', message: '' });
-                },
-                (error) => {
-                    setErrorMessage('Failed to send message. Please try again.');
-                    setSuccessMessage('');
-                }
-            );
+        const emailData = {
+            from_name: formData.name,
+            from_email: formData.email,
+            message: formData.message,
+        };
+        
+        emailjs.send(
+            process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+            process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+            emailData,
+            process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+        )
+            .then((result) => {
+                setSuccessMessage('Message sent successfully!');
+                setFormData({ name: '', email: '', message: '' });
+            }, (error) => {
+                setErrorMessage('Failed to send message. Please try again later.');
+            });
     };
 
     return (
@@ -64,10 +62,10 @@ const ContactMe = () => {
             </Description>
             <ContactList>
                 <ContactItem>
-                    <FaEnvelope /> <span>saifulislamx264@gmail.com</span>
+                    <FaEnvelope /> <span>youremail@example.com</span>
                 </ContactItem>
                 <ContactItem>
-                    <FaPhoneAlt /> <span>+880-1902486366</span>
+                    <FaPhoneAlt /> <span>+880-123-456-789</span>
                 </ContactItem>
                 <ContactItem>
                     <FaLinkedin />
@@ -77,33 +75,13 @@ const ContactMe = () => {
                 </ContactItem>
             </ContactList>
             <ContactForm onSubmit={sendEmail}>
-                <InputField
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="Your Name"
-                    required
-                />
-                <InputField
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="Your Email"
-                    required
-                />
-                <TextArea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="Your Message"
-                    required
-                />
+                <InputField type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} />
+                <InputField type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleChange} />
+                <TextArea name="message" placeholder="Your Message" value={formData.message} onChange={handleChange} />
                 <SubmitButton type="submit">Send Message</SubmitButton>
             </ContactForm>
-            {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>}
-            {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+            {successMessage && <p>{successMessage}</p>}
+            {errorMessage && <p>{errorMessage}</p>}
         </ContactSection>
     );
 };
