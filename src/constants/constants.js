@@ -80,4 +80,5 @@ export const TimeLineData = [
   { year: 2022, text: 'Started learning PHP and Laravel. Completed a dedicated course and finished my Diploma in Computer Engineering.' },
   { year: 2023, text: 'Learned the MERN Stack and took a course from Programming Hero. Competed in a team competition, finishing in the top 5.' },
   { year: 2024, text: 'Advanced my skills with new technologies and enrolled in another course from Programming Hero.' },
+  { year: 2025, text: 'Advanced my skills with new technologies and enrolled in another course from Programming Hero.' },
 ];

@@ -130,7 +130,7 @@ export const InputField = styled.input`
 
 export const TextArea = styled.textarea`
   padding: 0.75rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   border: 1px solid #444;
   border-radius: 4px;
   background-color: #2a2a3d;

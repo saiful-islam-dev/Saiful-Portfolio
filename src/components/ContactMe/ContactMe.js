@@ -13,6 +13,7 @@ import {
     SubmitButton,
 } from './ContactMeStyles';
 import { FaEnvelope, FaPhoneAlt, FaLinkedin } from 'react-icons/fa';
+import { AiFillGithub } from 'react-icons/ai';
 
 const ContactMe = () => {
     const [formData, setFormData] = useState({
@@ -39,7 +40,7 @@ const ContactMe = () => {
             from_email: formData.email,
             message: formData.message,
         };
-        
+
         emailjs.send(
             process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
             process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
@@ -62,17 +63,23 @@ const ContactMe = () => {
             </Description>
             <ContactList>
                 <ContactItem>
-                    <FaEnvelope /> <span>youremail@example.com</span>
+                    <FaEnvelope /> <span>saifulislamx264@gmail.com</span>
                 </ContactItem>
                 <ContactItem>
-                    <FaPhoneAlt /> <span>+880-123-456-789</span>
+                    <FaPhoneAlt /> <span>+8801902486366</span>
                 </ContactItem>
                 <ContactItem>
+                <AiFillGithub size="3rem" />
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+                        Github
+                    </a>
+                </ContactItem>
+                {/* <ContactItem>
                     <FaLinkedin />
                     <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
                         LinkedIn
                     </a>
-                </ContactItem>
+                </ContactItem> */}
             </ContactList>
             <ContactForm onSubmit={sendEmail}>
                 <InputField type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} />
