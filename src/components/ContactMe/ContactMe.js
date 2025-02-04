@@ -69,8 +69,8 @@ const ContactMe = () => {
                     <FaPhoneAlt /> <span>+8801902486366</span>
                 </ContactItem>
                 <ContactItem>
-                <AiFillGithub size="3rem" />
-                    <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+                    <AiFillGithub size="3rem" />
+                    <a href="https://github.com/saiful-islam-dev" target="_blank" rel="noopener noreferrer">
                         Github
                     </a>
                 </ContactItem>
