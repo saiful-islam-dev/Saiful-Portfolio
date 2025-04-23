@@ -15,6 +15,7 @@ import {
   Img
 } from './ProjectsStyles';
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
+import Link from 'next/link';
 
 const Projects = () => (
   <Section id="projects">
@@ -41,6 +42,9 @@ const Projects = () => (
           <UtilityList>
             <ExternalLinks href={p.visit}>Live Preview</ExternalLinks>
             <ExternalLinks href={p.source}>Source Code</ExternalLinks>
+            <Link href="/project">
+              <ExternalLinks>Details</ExternalLinks>
+            </Link>
           </UtilityList>
         </BlogCard>
       ))}
